@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vickie's - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css"/>
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <div id="home">
+        <div class="profile_name">
+          Vickie Jameson
+          <div class="contact_info">
+            <img src="html_finalprojimages/envelope.png" alt="Email icon"/>
+            Vickie@vmail.com
+          </div>
+          <div style="clear:both;"></div>
+          <div class="contact_info">
+            <img src="html_finalprojimages/phone.png" alt="Phone icon"/>
+            +13456764598
+          </div>
+        </div>
+        <div class="topdiv">
+          <a class="topmenu" href="#about-me">About Me</a>
+          <a class="topmenu" href="#skills">Skills</a>
+          <a class="topmenu" href="#projects">Projects</a>
+          <a class="topmenu" href="#recommendations">Recommendations</a>
+        </div>
+      </div>    
+    </nav>
+
+    <!-- About Me -->
+    <section id="about-me" class="container">
+      <div>
+        <img src="html_finalprojimages/girl-new.png" class="profile_image" alt="Profile icon"/>
+      </div>
+
+      <div>
+          <h1>
+            Hi, I'm Vickie! <img src="html_finalprojimages/flash.png" width="60px" alt="Energy icon"/>
+          </h1>
+          <p>
+            a dedicated web developer with three years of experience crafting user-focused 
+            websites and applications. Based in Seattle, I specialize in creating responsive, 
+            accessible interfaces that make digital experiences seamless and engaging.
+            My passion for clean code and intuitive design drives me to build projects that 
+            not only meet client needs but also delight users. When I'm not coding, you can find me
+            exploring new tech trends or hiking the trails around Puget Sound.
+          </p>
+      </div>
+    </section>
+              
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div style="clear:both;"></div>
+
+      <div class="all_skills">
+        <div class="skill">
+          <img src="html_finalprojimages/html5.png" alt="HTML5"/>
+          <h6>HTML</h6>
+          <p>2 years experience</p>
+        </div>  
+
+        <div class="skill">
+          <img src="html_finalprojimages/js.jpeg" alt="JavaScript"/>
+          <h6>JavaScript</h6>
+          <p>3 years experience</p>
+        </div>  
+
+        <div class="skill">
+          <img src="html_finalprojimages/CSS3.png" alt="CSS3"/>
+          <h6>CSS</h6>
+          <p>3 years experience</p>
+        </div>
+
+        <div class="skill">
+          <img src="html_finalprojimages/react.png" alt="React"/>
+          <h6>React</h6>
+          <p>2 years experience</p>
+        </div>
+
+        <div class="skill">
+          <img src="html_finalprojimages/node.png" alt="Node.js"/>
+          <h6>Node.js</h6>
+          <p>2 years experience</p>
+        </div>
+
+        <div class="skill">
+          <img src="html_finalprojimages/python.png" alt="Python"/>
+          <h6>Python</h6>
+          <p>1 year experience</p>
+        </div>
+
+        <div class="skill">
+          <img src="html_finalprojimages/sql.png" alt="SQL"/>
+          <h6>SQL</h6>
+          <p>2 years experience</p>
+        </div>
+
+        <div class="skill">
+          <img src="html_finalprojimages/ux-design.png" alt="UX/UI Design"/>
+          <h6>UX/UI Design</h6>
+          <p>4 years experience</p>
+        </div>
+      </div>
+    </section>
+          
+    <!-- Projects -->
+    <section class="projects" id="projects">
+      <h2>Projects</h2>
+      <div style="clear:both;"></div>
+
+        <div id="projects-container" class="projects-container">
+          <div class="project-card">
+            <h3>TaskFlow - React Task Management App</h3>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">Express</span>
+            </div>
+            <ul>
+              <li>Built a full-stack task management application with real-time collaboration features</li>
+              <li>Implemented drag-and-drop functionality using React DnD for intuitive task organization</li>
+              <li>Integrated JWT authentication and role-based access control</li>
+              <li>Deployed on AWS with CI/CD pipeline using GitHub Actions</li>
+            </ul>
+            <div class="code-snippet">
+              <pre><code>// Task component with drag functionality
+const Task = ({ task, onDragStart }) => {
+  return (
+    &lt;div 
+      draggable 
+      onDragStart={(e) => onDragStart(e, task.id)}
+      className="task-item"
+    &gt;
+      &lt;h4&gt;{task.title}&lt;/h4&gt;
+      &lt;p&gt;{task.description}&lt;/p&gt;
+      &lt;span className="priority-{task.priority}"&gt;
+        {task.priority}
+      &lt;/span&gt;
+    &lt;/div&gt;
+  );
+};</code></pre>
+            </div>
+          </div>
+          <hr>
+          <div class="project-card">
+            <h3>WeatherWise - Weather Dashboard</h3>
+            <div class="project-tech">
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">OpenWeather API</span>
+              <span class="tech-tag">Chart.js</span>
+            </div>
+            <ul>
+              <li>Created a responsive weather dashboard with 5-day forecasts and historical data</li>
+              <li>Implemented geolocation services for automatic location detection</li>
+              <li>Built interactive charts showing temperature trends and precipitation data</li>
+              <li>Added dark/light theme toggle with CSS custom properties</li>
+            </ul>
+            <div class="code-snippet">
+              <pre><code>// Weather data fetching with error handling
+async function fetchWeatherData(city) {
+  try {
+    const response = await fetch(
+      `${API_BASE_URL}?q=${city}&appid=${API_KEY}&units=metric`
+    );
+    if (!response.ok) throw new Error('City not found');
+    
+    const data = await response.json();
+    return {
+      temperature: data.main.temp,
+      humidity: data.main.humidity,
+      description: data.weather[0].description,
+      icon: data.weather[0].icon
+    };
+  } catch (error) {
+    console.error('Weather fetch failed:', error);
+    return null;
+  }
+}</code></pre>
+            </div>
+          </div>
+          <hr>
+          <div class="project-card">
+            <h3>EcoTracker - Carbon Footprint Calculator</h3>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Flask</span>
+              <span class="tech-tag">SQLite</span>
+              <span class="tech-tag">Bootstrap</span>
+            </div>
+            <ul>
+              <li>Developed a web application to calculate and track personal carbon footprint</li>
+              <li>Created algorithms to estimate emissions from transportation, energy, and lifestyle choices</li>
+              <li>Built data visualization dashboard with matplotlib and plotly</li>
+              <li>Implemented user authentication and personalized recommendations</li>
+            </ul>
+            <div class="code-snippet">
+              <pre><code># Carbon footprint calculation algorithm
+def calculate_transport_emissions(distance, vehicle_type):
+    emission_factors = {
+        'car': 0.2,      # kg CO2 per km
+        'bus': 0.05,     # kg CO2 per km
+        'train': 0.04,   # kg CO2 per km
+        'bicycle': 0.0   # kg CO2 per km
+    }
+    
+    factor = emission_factors.get(vehicle_type, 0.2)
+    return distance * factor
+
+def get_sustainability_tips(footprint):
+    if footprint > 10:
+        return ["Consider public transport", "Switch to LED bulbs"]
+    elif footprint > 5:
+        return ["Try meatless Mondays", "Use reusable water bottle"]
+    else:
+        return ["Great job! Keep it up!"]</code></pre>
+            </div>
+          </div>
+          <hr>
+          <div class="project-card">
+            <h3>DevConnect - Developer Networking Platform</h3>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Firebase</span>
+              <span class="tech-tag">Tailwind CSS</span>
+              <span class="tech-tag">Socket.io</span>
+            </div>
+            <ul>
+              <li>Built a social networking platform specifically for developers and tech professionals</li>
+              <li>Implemented real-time messaging and video calling using WebRTC</li>
+              <li>Created skill-based matching algorithm for project collaboration</li>
+              <li>Added GitHub integration for automatic portfolio updates</li>
+            </ul>
+            <div class="code-snippet">
+              <pre><code>// Real-time messaging component
+const ChatRoom = ({ roomId, userId }) => {
+  const [messages, setMessages] = useState([]);
+  const [newMessage, setNewMessage] = useState('');
+
+  useEffect(() => {
+    const socket = io('/chat');
+    socket.emit('join-room', roomId);
+    
+    socket.on('message', (message) => {
+      setMessages(prev => [...prev, message]);
+    });
+    
+    return () => socket.disconnect();
+  }, [roomId]);
+
+  const sendMessage = () => {
+    socket.emit('send-message', {
+      roomId,
+      userId,
+      text: newMessage,
+      timestamp: Date.now()
+    });
+    setNewMessage('');
+  };
+};</code></pre>
+            </div>
+          </div>
+    </div>
+    </section>
+    <div style="clear:both;"></div>
+
+    <!-- Recommendations -->
+    <section id="recommendations">
+      <h2>Recommendations</h2>
+      <div style="clear:both;"></div>
+      <div class="all_recommendations" id="all_recommendations">
+        <div class="recommendation">
+          <span>&#8220;</span>
+          Vickie is a very quick learner and quickly grasps key concepts of Web development. 
+          She got a great attitude & she is an excellent team player. 
+          She has a curious mind and asks the right question. 
+          She takes initiative within a team and has potentials to lead the team.
+          <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+          <span>&#8220;</span>
+          Working with Vickie has been an awesome experience. 
+          She is highly knowledgable and always goes the extra step to make sure everything is right. 
+          For any future projects that need her expertise I would definitely want to work with her again.
+          <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+          <span>&#8220;</span>
+          I had worked along with Vickie during the initial phase of our venture which needed Web development. 
+          She is a committed resource who has in depth knowledge about the domain. 
+          She will be an asset for any organisation! 
+          <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+          <span>&#8220;</span>
+          Vickie's technical skills are exceptional, but what really sets her apart is her ability to translate complex requirements into elegant solutions. 
+          She consistently delivered high-quality code on time and was always willing to mentor junior developers. 
+          Her React and Python projects were particularly impressive and showed deep understanding of modern development practices.
+          <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+          <span>&#8220;</span>
+          As a project manager, I've worked with many developers, but Vickie stands out for her proactive communication and problem-solving approach. 
+          She doesn't just code - she thinks about user experience, performance, and scalability. 
+          The weather dashboard she built for our team is still in daily use and has received countless positive user feedback.
+          <span>&#8221;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommendation Form -->
+    <section id="contact">
+      <div class="flex_center">
+        <fieldset>
+          <legend class="introduction">Leave a Recommendation</legend>          
+          <input type="text" placeholder="Name (Optional)"> <br/>
+          <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
+          <div class="flex_center">
+            <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
+          </div>
+        </fieldset>
+      </div>
+    </section>
+
+    <div class="iconbutton">
+      <a href="#home">
+        <img src="html_finalprojimages/home.png" alt="Home" width="25px"/>
+      </a>
+    </div>
+
+    <div class="popup" id="popup" class="flex_center">
+      <img src="html_finalprojimages/checkmark--outline.svg" alt="Success"/>
+      <h3>Thank you for your recommendation!</h3>
+      <button onclick="showPopup(false)">Ok</button>
+    </div>
+  </body>
+</html>
