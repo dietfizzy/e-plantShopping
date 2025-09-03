@@ -1,44 +1,57 @@
 
 import React, { useState } from 'react';
-import ProductList from './ProductList';
+import Navbar from './Navbar';
+import LandingPage from './pages/LandingPage';
+import ProductsPage from './pages/ProductsPage';
+import CartPage from './pages/CartPage';
 import './App.css';
-import AboutUs from './AboutUs';
 
 function App() {
-  
-  const [showProductList, setShowProductList] = useState(false);
-
-  const handleGetStartedClick = () => {
-    setShowProductList(true);
-  };
+  const [currentPage, setCurrentPage] = useState('home');
 
   const handleHomeClick = () => {
-    setShowProductList(false);
+    setCurrentPage('home');
+  };
+
+  const handlePlantsClick = () => {
+    setCurrentPage('products');
+  };
+
+  const handleCartClick = () => {
+    setCurrentPage('cart');
+  };
+
+  const handleGetStartedClick = () => {
+    setCurrentPage('products');
+  };
+
+  const handleContinueShopping = () => {
+    setCurrentPage('products');
+  };
+
+  const renderCurrentPage = () => {
+    switch (currentPage) {
+      case 'home':
+        return <LandingPage onGetStarted={handleGetStartedClick} />;
+      case 'products':
+        return <ProductsPage />;
+      case 'cart':
+        return <CartPage onContinueShopping={handleContinueShopping} />;
+      default:
+        return <LandingPage onGetStarted={handleGetStartedClick} />;
+    }
   };
 
   return (
-    <div className="app-container">
-      <div className={`landing-page ${showProductList ? 'fade-out' : ''}`}>
-        <div className="background-image"></div>
-        <div className="content">
-         <div className="landing_content">
-         <h1>Welcome To Paradise Nursery</h1>
-          <div className="divider"></div>
-          <p>Where Green Meets Serenity</p>
-         
-          <button className="get-started-button" onClick={handleGetStartedClick}>
-            Get Started
-          </button>
-         </div>
-          <div className="aboutus_container">
-          <AboutUs/>
-          </div>
-          </div>
-
-      </div>
-      <div className={`product-list-container ${showProductList ? 'visible' : ''}`}>
-        <ProductList onHomeClick={handleHomeClick}/>
-      </div>
+    <div className="app">
+      <Navbar 
+        onHomeClick={handleHomeClick}
+        onPlantsClick={handlePlantsClick}
+        onCartClick={handleCartClick}
+      />
+      <main className="main-content">
+        {renderCurrentPage()}
+      </main>
     </div>
   );
 }

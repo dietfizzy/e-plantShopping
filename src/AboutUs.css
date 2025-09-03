@@ -7,11 +7,27 @@
   }
   
   .about-us-heading {
-    font-size: 32px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-  }
+  font-size: 3rem;
+  font-weight: 500;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #27ae60;
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: -0.5px;
+  position: relative;
+}
+
+.about-us-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #27ae60, #2ecc71);
+  border-radius: 2px;
+}
   
   .about-us-description {
     font-size: 18px;

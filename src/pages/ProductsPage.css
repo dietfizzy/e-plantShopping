@@ -1,0 +1,123 @@
+.products-page {
+  min-height: 100vh;
+  background: #faf8f3; /* Antique white background */
+  padding: 40px 20px;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 0 20px;
+}
+
+.page-header h1 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  letter-spacing: -0.5px;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  font-weight: 300;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.plant-section {
+  margin-bottom: 80px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 300;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #34495e;
+  margin-bottom: 15px;
+  letter-spacing: -0.3px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #27ae60, #2ecc71, #58d68d);
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(39, 174, 96, 0.3);
+}
+
+.section-description {
+  font-size: 1rem;
+  color: #95a5a6;
+  font-weight: 300;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.plants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .products-page {
+    padding: 30px 15px;
+  }
+  
+  .page-header h1 {
+    font-size: 2.8rem;
+    font-weight: 300;
+  }
+  
+  .page-header p {
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+  
+  .plants-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 0 10px;
+  }
+  
+  .plant-section {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
