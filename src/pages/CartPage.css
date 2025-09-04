@@ -1,6 +1,6 @@
 .cart-page {
   min-height: 100vh;
-  background: #faf8f3; /* Antique white background */
+  background: linear-gradient(180deg, #fafbfc 0%, #f8f9fa 100%);
   padding: 40px 20px;
 }
 
@@ -13,16 +13,15 @@
 }
 
 .cart-header h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 300;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   color: #2c3e50;
   margin-bottom: 10px;
   letter-spacing: -0.5px;
 }
 
 .cart-header p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #7f8c8d;
   font-weight: 300;
 }
@@ -51,20 +50,17 @@
 }
 
 .empty-cart h2 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 300;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   color: #2c3e50;
   margin-bottom: 15px;
-  letter-spacing: -0.3px;
 }
 
 .empty-cart p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #7f8c8d;
   margin-bottom: 30px;
   line-height: 1.6;
-  font-weight: 300;
 }
 
 .cart-items {
@@ -96,8 +92,7 @@
   border-radius: 15px;
   overflow: hidden;
   flex-shrink: 0;
-  background: linear-gradient(135deg, #f8f9fa, #e8f5e8);
-  border: 2px solid rgba(39, 174, 96, 0.1);
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
 }
 
 .cart-item-image {
@@ -118,15 +113,14 @@
 
 .cart-item-name {
   font-size: 1.4rem;
-  font-weight: 400;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 500;
   color: #2c3e50;
   margin: 0 0 8px 0;
   letter-spacing: -0.2px;
 }
 
 .cart-item-description {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #7f8c8d;
   margin: 0 0 10px 0;
   line-height: 1.5;
@@ -151,10 +145,9 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  background: linear-gradient(135deg, #f8f9fa, #e8f5e8);
+  background: #f8f9fa;
   border-radius: 50px;
   padding: 8px 12px;
-  border: 1px solid rgba(39, 174, 96, 0.1);
 }
 
 .quantity-btn {
@@ -235,9 +228,8 @@
 }
 
 .total-section h2 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 300;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   color: #2c3e50;
   margin: 0;
   letter-spacing: -0.3px;
@@ -293,18 +285,7 @@
   }
   
   .cart-header h1 {
-    font-size: 2.5rem;
-    font-weight: 300;
-  }
-  
-  .cart-header p {
-    font-size: 1.1rem;
-    font-weight: 300;
-  }
-  
-  .empty-cart h2 {
     font-size: 2rem;
-    font-weight: 300;
   }
   
   .cart-item {
